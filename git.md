@@ -28,7 +28,7 @@
 
 - **git clone**
   - Creates a local copy of an existing Git repository stored on a remote server.
-  - Example: _git clone https://github.com/username/project my-local-project_
+  - Example: _git clone https://github.com/wissemmtiri/project.git my-local-project_
 - **git init**
   - Initializes a new Git repository in your current directory. This essentially creates a hidden directory called .git where Git stores all the information about your project's history, including versions of your files, commit messages, and branch information.
   - Command: _git init_
@@ -50,13 +50,13 @@
 
 ## Setting up a git repo
 
-### If the remote repository already exists
+### _If the remote repository already exists_
 
 1. _git clone https://github.com/wissemmtiri/repo.git project_name_
    1. project_name: name of the local repository
 2. _cd project_name_
 
-### If the code is local and no remote repo is initialized
+### _If the code is local and no remote repo is initialized_
 
 1. _git init_
    1. creates a _.git_ directory in the working directory
@@ -71,6 +71,8 @@
 7. _git push -u origin main_
 
 ## Branches Concept
+
+![feature-branch](./images/git/image.png)
 
 - **_Definition_**
 
@@ -95,3 +97,26 @@
   - create a branch for every feature and every bugfix
     - for features: feature/name
     - for bugfixes: bugfix/name
+
+## Pull Requests
+
+- **_Definition_**
+  - They act as formal proposals to integrate changes from one branch into another, typically the main branch. This provides a controlled and transparent way to review and discuss potential changes before they become permanent.
+- **_Use cases_**
+  - Junior Dev, Big Features, Expertise needs
+- **_How_**
+
+  - The functionality for creating and reviewing merge requests typically resides within specific platforms or Git hosting services like GitHub, GitLab, or Bitbucket.
+    - _It is not recommended to use CLI for pull requests_
+
+  1. **_Ensure your branch is ahead of the main branch_**: This means your branch contains newer commits that aren't present in the main branch.
+     1. ![alt text](./images/git/image-2.png)
+  2. **_Access the pull request functionality on your chosen platform_**
+     1. ![alt text](./images/git/image-3.png)
+  3. **_Fill out the form_**
+     1. ![alt text](./images/git/image-4.png)
+  4. **_Your request will be visible to designated reviewers or the wider team, based on your workflow._**
+  5. **_Acceptance and merging_**: Once the code is deemed ready, designated reviewers or merge approvers will integrate your changes into the main codebase.
+
+- **_NB_**
+  - Merge requests are more than just code integration, they're a collaborative learning and optimization opportunity.
