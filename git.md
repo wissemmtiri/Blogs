@@ -48,7 +48,7 @@
   - Shows the current state of your working directory and staging area.
   - Command: _git status_
 
-## Scenarios
+## Setting up a git repo
 
 ### If the remote repository already exists
 
@@ -69,3 +69,29 @@
 6. _git branch -M main_
    1. create a branch
 7. _git push -u origin main_
+
+## Branches Concept
+
+- **_Definition_**
+
+  - A lightweight pointer to a specific commit in your repository's history. It serves as a named divergence from the main development line, allowing you to experiment with changes, fix bugs, or develop new features without affecting the main branch. Think of it as a parallel path you can create and work on independently, eventually merging it back into the main road when your changes are ready.
+
+- **_Commands_**
+
+  - _git branch_
+    - Lists all existing branches in your local repository.
+  - _git pull_
+    - Retrieves changes from the remote repository and merges them into your current branch.
+  - _git checkout branch-name_
+
+    - Switches your working directory to the specified branch.
+
+  - _git checkout -b branch-name_
+    - Creates a new branch locally and switches to it in one step.
+  - _git push --set-upstream origin branch-name_
+    - Creates and sets an upstream branch for a locally created branch, enabling easy pushing to the remote.
+
+- **_Best Practises_**
+  - create a branch for every feature and every bugfix
+    - for features: feature/name
+    - for bugfixes: bugfix/name
