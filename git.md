@@ -1,4 +1,4 @@
-# Version Control With Git
+# Version Control With Git <img src="./images/git/logo.png" width="20">
 
 ## Basic Concepts:
 
