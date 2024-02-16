@@ -72,7 +72,7 @@
 
 ## Branches Concept
 
-![feature-branch](./images/git/image.png)
+![feature-branch](./images/git/BranchConcept.png)
 
 - **_Definition_**
 
@@ -110,7 +110,7 @@
     - _It is not recommended to use CLI for pull requests_
 
   1. **_Ensure your branch is ahead of the main branch_**: This means your branch contains newer commits that aren't present in the main branch.
-     1. ![alt text](./images/git/image-2.png)
+     1. ![alt text](./images/git/pullReq1.png)
   2. **_Access the pull request functionality on your chosen platform_**
      1. ![alt text](./images/git/image-3.png)
   3. **_Fill out the form_**
@@ -120,3 +120,25 @@
 
 - **_NB_**
   - Merge requests are more than just code integration, they're a collaborative learning and optimization opportunity.
+
+## Deleting Branches
+
+- **_Delete a branch or leave it ?_**
+  - If the changes from the branch have been merged into the main branch, the branch is no longer needed and **deleting** it helps declutter your repository.
+  - If you are unsure whether you might need the branch again, or the branch is part of a bigger development process, **retain it** until the process is complete.
+- **_Delete on the remote repo_**
+
+  - **use GUI:**
+    - **_Navigate to the branches section_**
+      - ![branches](./images/git/branches.png)
+    - **_Locate the branch you want to delete_**
+      - ![branch](./images/git/branch.png)
+    - **_Click delete branch_**
+      - ![deleteBranch](./images/git/delete.png)
+
+- **_NB_**: The local repo will not be notified about the deleted branch. We need to delete it manually.
+
+- **_Delete locally_**
+  - _git checkout main/master_
+  - _git pull_
+  - _git branch -d branch-name_
