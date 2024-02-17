@@ -223,3 +223,24 @@
         - Teleports you to the commit with the specified SHA, granting immediate access to that specific state.
       - _git checkout branch-name_
         - switches you to the designated branch, effectively traveling to the latest commit on that branch.
+
+## Modifying and Reverting Git Commits
+
+- **_Introduction_**
+  - Git empowers developers with several commands to undo, modify, and revert edits, ensuring optimal code cleanliness and collaborative harmony.
+- **_How to do it ?_**
+  - _git reset --hard/soft HEAD~n_
+  - The git reset command allows you to move the HEAD pointer back in history, essentially undoing specific commits. It offers two primary modes:
+    - **--hard**: This operation permanently discards all changes introduced in the targeted commit(s). Use it with caution, as lost changes are unrecoverable
+    - **--soft** (default): This mode undoes the commit metadata (author, message, timestamp) but preserves the actual file changes. It's ideal for updating commit messages or making minor corrections without losing valuable code modifications.
+  - The **HEAD~n** syntax specifies the number of commits to move back within history (e.g., HEAD~2 moves back two commits).
+- **_Updating the Last Commit with git commit --amend_**
+
+  - This command allows you to directly modify the contents of the last local commit, incorporating changes and updating the message without creating a new commit history entry.
+
+- **Considerations for Remote Repositories**
+  - Caution! Directly modifying history on a remote repository can create issues for collaborators. If you've already pushed a problematic commit:
+    - **Local Undo**: Use **_git reset --hard HEAD~1_** to undo the commit locally.
+    - **Force Push** (Use with Caution): While generally discouraged due to potential conflicts, **_git push --force_** forcefully updates the remote repository with your local changes. **Only use this option when absolutely necessary and after clear communication with collaborators.**
+    - **OR:**
+      - **_git revert_**: This safer alternative creates a new commit that reverses the changes introduced in the problematic commit. It doesn't remove the original commit but provides a clear audit trail of the corrective action.
