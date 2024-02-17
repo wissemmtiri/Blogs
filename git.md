@@ -166,3 +166,12 @@
     - Attempts to integrate those updates into your current branch.
   - If integration is seamless, your feature branch seamlessly aligns with the latest changes, resulting in a single, linear history devoid of merge commits.
     - ![alt text](./images/git/rebase_solution.png)
+
+## Merge Conflicts
+
+- **_Introduction_**
+  - Merge conflicts arise when distinct modifications are made to the same code lines across different branches. This results in Git identifying conflicting sections, presenting developers with a "battlefield" of conflicting versions. Each version, designated as "theirs" and "yours," requires careful analysis and integration.
+- **_Solutions_**
+  - **Manual Resolution**: The traditional approach involves meticulous examination of both versions within a text editor. Selecting the optimal components from each and merging them into a single, cohesive line constitutes the core strategy.
+  - **Merge Tool Expertise**: Many modern IDEs and Git clients offer sophisticated visual merge tools. These interactive interfaces facilitate intuitive conflict resolution, often presenting side-by-side comparisons and allowing for streamlined merging.
+    - ![alt text](./images/git/conflict.png)
