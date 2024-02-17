@@ -192,3 +192,19 @@
   - While leveraging the .gitignore file is crucial for safeguarding sensitive information in your Git repository, a critical safeguard often goes overlooked: protecting the .gitignore itself. Unintentionally adding it to the repository can have unintended consequences.
   - **_Note_**
     - .gitignore only affects files that haven't yet been committed.
+      - Solution: force git to stop tracking the commited files. (_git rm -r(if folder) --cached filename/foldername_)
+
+## Stashing Progress: Ensuring Agile Git Workflows
+
+- **_Introduction_**
+  - Within the dynamic environment of version control, maintaining flexibility and control over ongoing changes proves crucial. The git stash command emerges as a valuable tool, facilitating the temporary storage and subsequent retrieval of work-in-progress modifications, fostering enhanced workflow agility.
+- **_Use_**
+  - _**git stash**_: This fundamental command triggers the storage of current changes. Imagine meticulously organizing your manuscript for temporary safekeeping.
+  - **_git stash pop_**: When ready to resume development, this command retrieves the stashed changes and integrates them back into your working directory.
+- Beyond fundamental usage, git stash offers compelling benefits for diverse scenarios:
+
+- **_Use Cases_**
+  - **Hypothesis Testing**:
+    - Suspecting a recent change might trigger an issue? Stash your current work, revert to an earlier commit, and conduct testing without your modifications. If the problem persists, git stash pop effortlessly reintroduces your work for further debugging.
+  - **Branch Switching Efficiency**:
+    - Multitasking between features? Stash your changes on one branch, seamlessly switch to another, and make progress there. Upon returning, git stash pop effortlessly reintegrates your stashed modifications.
