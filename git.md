@@ -142,3 +142,27 @@
   - _git checkout main/master_
   - _git pull_
   - _git branch -d branch-name_
+
+## Streamline Your Git Workflow: Ditch Merge Commits with Rebasing
+
+- **_Introduction_**
+
+  - Ever feel frustrated by cluttered Git histories with merge commits littering your branches? You're not alone! While merges are essential for integrating changes, they can create messy logs that hinder collaboration and clarity. Enter the power of rebasing, a technique that rewrites history for a cleaner, linear Git experience.
+
+- **_Scenario_**
+
+  - Imagine you're part of a dynamic development team working on a new feature. You diligently craft your feature branch, committing changes for UI design, core functionality, and bug fixes. Meanwhile, the main branch receives valuable updates and bug fixes from your teammates.
+
+- **_Clash of Branches_**
+
+  - Attempting to push your feature directly leads to an error: "remote contains work that you do not have locally."
+    - ![alt text](./images/git/push_fail_rebase.png)
+  - The traditional solution involves pulling the latest changes and then pushing your work, resulting in two commits: one for your feature and another for the merge.
+    - ![alt text](./images/git/double_commit_rebase.png)
+
+- **_Rebase to the Rescue_**
+  - Instead of creating merge clutter, consider rebasing your feature branch onto the updated main branch using _git pull -r_. This command:
+    - Fetches updates from all remotes (not just the default).
+    - Attempts to integrate those updates into your current branch.
+  - If integration is seamless, your feature branch seamlessly aligns with the latest changes, resulting in a single, linear history devoid of merge commits.
+    - ![alt text](./images/git/rebase_solution.png)
