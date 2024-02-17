@@ -208,3 +208,18 @@
     - Suspecting a recent change might trigger an issue? Stash your current work, revert to an earlier commit, and conduct testing without your modifications. If the problem persists, git stash pop effortlessly reintroduces your work for further debugging.
   - **Branch Switching Efficiency**:
     - Multitasking between features? Stash your changes on one branch, seamlessly switch to another, and make progress there. Upon returning, git stash pop effortlessly reintegrates your stashed modifications.
+
+## Navigating Git History
+
+- **_Introduction_**
+  - Git empowers us to explore the intricate paths of project history, providing invaluable insights into past decisions, debugging intricacies, and facilitating reversions to previous states. This guide presents two essential commands that unlock this power:
+    - _git log_
+      - ![alt text](./images/git/gitlog.png)
+    - _git checkout_
+- **_How to use ?_**
+  - While _git log_ allows observation, _git checkout_ serves as your temporal portal. This command empowers you to precisely switch your working directory to a specific point in time, represented by a commit SHA, branch name, or tag.
+    - **Example**:
+      - _git checkout 6d842319062d476c06e7877321159f2fbca980a2_
+        - Teleports you to the commit with the specified SHA, granting immediate access to that specific state.
+      - _git checkout branch-name_
+        - switches you to the designated branch, effectively traveling to the latest commit on that branch.
