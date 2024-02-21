@@ -42,3 +42,56 @@
 4. **_Running the Script_**
    - Navigate to the directory containing your script using the cd command. Now, initiate the script by typing its name (e.g., ./basics.sh) and pressing Enter. Observe the script execute the defined commands, leaving its mark on the system.
      - ![alt text](./images/bashScripting/basicRun.png)
+
+## VARIABLES
+
+1. **_Defining variables:_**
+   - variable_name=value
+   - ![alt text](./images/bashScripting/vars.png)
+2. **_Accessing variables:_**
+   - ![alt text](./images/bashScripting/access_var.png)
+   - ![alt text](./images/bashScripting/output.png)
+3. **_Unsetting variables:_**
+   - ![alt text](./images/bashScripting/unset_var.png)
+   - ![alt text](./images/bashScripting/output_unset.png)
+4. **_Command Substitution:_** Need the output of a command as a variable's value? Command substitution makes it possible:
+   - ![alt text](./images/bashScripting/command_subs.png)
+   - ![alt text](./images/bashScripting/subs_out.png)
+
+## CONDITIONAL STATEMENTS
+
+- Conditional statements, often referred to as **if statements**, are fundamental building blocks in Shell Scripting. They allow you to control the flow of your script based on specific conditions, making it adaptable and efficient.
+- Syntax:
+
+  - ![alt text](./images/bashScripting/if_example.png)
+  - Use **if** to start the statement, followed by a condition (expression between square brackets) to evaluate.
+  - Place commands indented under if to execute if the condition is true.
+  - Use **elif** for additional conditions, else as a fallback if none match.
+  - End with **fi** to mark the end.
+
+- Expressions:
+  - Conditions within if statements are often made up of expressions enclosed in square brackets. These expressions can involve:
+    - **Arithmetic operations**: +=, -=, \*=, /= (e.g., count=$((count+1)))
+    - **Comparisons**: ==, !=, <, >, <=, >= (e.g., if [[-f $file]]; then ...)
+  - https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html
+
+## PASSING ARGUMENTS TO SHELL SCRIPTS
+
+- Arguments act as additional data points passed when you run the script, empowering it to handle diverse scenarios and personalize its behavior.
+
+- **_Positional Arguments: $1, $2, ..., $9_**
+
+  - When you run your script, the first argument goes into $1, the second into $2, and so on, up to $9.
+  - ![alt text](./images/bashScripting/pos_args1.png)
+  - ![alt text](./images/bashScripting/pos_args.png)
+
+- **_All in One: $\*_**
+  - Sometimes, you might need to process all arguments together. That's where **_$\*_** comes in handy. It captures all arguments into a single space-separated string.
+  - ![alt text](./images/bashScripting/all_in_one_code.png)
+  - ![alt text](./images/bashScripting/all_out.png)
+- **_Knwoing Limits: $#_**
+  - **_$#_** holds the total number of arguments passed.
+  - ![alt text](./images/bashScripting/n_args.png)
+  - ![alt text](./images/bashScripting/n_args_out.png)
+- **_Capturing Execution Status: $?_**
+  - **_$?_** captures the value returned by the last command.
