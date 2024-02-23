@@ -95,3 +95,27 @@
   - ![alt text](./images/bashScripting/n_args_out.png)
 - **_Capturing Execution Status: $?_**
   - **_$?_** captures the value returned by the last command.
+
+## READ USER INPUT
+
+- read -p "message" var_name
+
+## LOOPS
+
+- while loop
+- for loop
+- until loop
+- select loop
+
+## FUNCTIONS
+
+- function function_name {}
+  - When called, we don't use parentheses.
+- Accept parameters in function.
+- Returning values from functions.
+
+## USE
+
+- Backup Scripts
+- Monitoring Scripts
+- Server Configuration Scripts
